@@ -5,6 +5,9 @@ pool:
 variables:
  buildConfiguration: 'Release'
 steps:
-- script: echo "Hello Word $(buildConfiguration)"
-  displayName: 'dotnet build $(buildConfiguration)'
+  
+- script: echo "$(dotnet --version)"
+  displayName: 'Print out dotnet sdk version'
+  
 - script: dotnet build --configuration $(buildConfiguration) **/*.csproj
+  displayName: 'dotnet build $(buildConfiguration)'
