@@ -5,9 +5,10 @@ pool:
 variables:
  buildConfiguration: 'Release'
 steps:
+- task: UseDotNet@2
+  displayName: "Use .Net SDK 6.x"
+  inputs:
+    packageType: sdk
+    version: '6.x'
   
-- script: echo "$(dotnet --version)"
-  displayName: 'Print out dotnet sdk version'
-  
-- script: dotnet build --configuration $(buildConfiguration) **/*.csproj
-  displayName: 'dotnet build $(buildConfiguration)'
+
