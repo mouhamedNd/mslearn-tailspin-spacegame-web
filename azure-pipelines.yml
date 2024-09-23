@@ -7,3 +7,4 @@ variables:
 steps:
 - script: echo "Hello Word $(buildConfiguration)"
   displayName: 'dotnet build $(buildConfiguration)'
+- script: dotnet build --configuration $(buildConfiguration) **/*.csproj
