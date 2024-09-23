@@ -5,5 +5,5 @@ pool:
 variables:
  buildConfiguration: 'Release'
 steps:
-- script: echo "Hello Wordl"
+- script: echo "Hello Word $(buildConfiguration)"
   displayName: 'dotnet build $(buildConfiguration)'
