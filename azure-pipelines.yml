@@ -10,5 +10,9 @@ steps:
   inputs:
     packageType: sdk
     version: '6.x'
+- task: DotNetCoreCLI@2
+  displayName: "Verifie if .Net6 is Here"
+  inputs:
+    arguments: '--version'
   
 
