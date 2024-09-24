@@ -11,6 +11,14 @@ steps:
     packageType: sdk
     version: '6.x'
 
+
+- task: UseNode@1
+  displayName: "Install NodeJS on the agent"
+  inputs:
+    version: '20.17.*'
+  
+  
+
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
