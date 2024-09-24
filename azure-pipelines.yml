@@ -10,9 +10,15 @@ steps:
   inputs:
     packageType: sdk
     version: '6.x'
-- task: DotNetCoreCLI@2
-  displayName: "Verifie if .Net6 is Here"
+- task: Npm@1
+  displayName: 'Run npm install'
   inputs:
-    arguments: '--version'
+    verbose: false
+
+- script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
+  displayName: 'Compile Sass assets'
+
+- task: gulp@1
+  displayName: 'Run gulp tasks'
   
 
