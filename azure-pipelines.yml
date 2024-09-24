@@ -15,8 +15,8 @@ steps:
 - task: UseNode@1
   displayName: "Install NodeJS on the agent"
   inputs:
-    version: '20.17.*'
-  
+    version: '14.17.*'
+ 
   
 
 - task: Npm@1
@@ -26,6 +26,9 @@ steps:
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
+
+- script: 'npm install  gulp-cli'
+  displayName: 'Install the gulp cli tools'
 
 - task: gulp@1
   displayName: 'Run gulp tasks'
