@@ -27,11 +27,11 @@ steps:
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
 
-- script: 'npm install  gulp-cli'
-  displayName: 'Install the gulp cli tools'
+- script: './node_modules/.bin/gulp'
+  displayName: "Run Gulp Tasks"
 
-- task: gulp@1
-  displayName: 'Run gulp tasks'
+
+
 
 
   
